@@ -8,6 +8,9 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+
+    xmlToDf = pd.DataFrame(all_items,columns=['Object','Number','Responsible'])        
+    return xmlToDf;
 xmlToDf= convertXMLtoDataFrame()
 print(xmlToDf.to_string(index=False))
 
