@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Read the xml and convert to data frame') {
             steps {
-                sh "python3 parametercoverage1.py" 
+                sh "python3 parametercoverage2.py" 
             }
         }
     }
