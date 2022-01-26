@@ -9,10 +9,24 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
+def convertXMLtoDataFrame():
+    #print("convertXMLtoDataFrame")
+    prstree = ET.parse('config.xml')
+    root = prstree.getroot()
+
+    store_items = []
+    all_items = []
+    for storeno in root.find('POOL').findall('Parameter'):  
+        obj=storeno.attrib.get('obj')
+        no= storeno.find('No').attrib.get('Nsp')
+        res= storeno.find('Responsible').text
+        store_items = [obj,no,res]
+        all_items.append(store_items)
+  
     xmlToDf = pd.DataFrame(all_items,columns=['Object','Number','Responsible'])        
     return xmlToDf;
+
 xmlToDf= convertXMLtoDataFrame()
-print(xmlToDf.to_string(index=False))
 
 # Step 3 -- Function to find the Parameter in the xml data frame
 print('Function to find the Parameter in the xml data frame')
