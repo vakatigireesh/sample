@@ -10,7 +10,7 @@ from email import encoders
 
 
 def convertXMLtoDataFrame():
-    #print("convertXMLtoDataFrame")
+    print("convertXMLtoDataFrame")
     prstree = ET.parse('config.xml')
     root = prstree.getroot()
 
