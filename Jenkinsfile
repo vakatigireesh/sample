@@ -17,5 +17,10 @@ pipeline {
                 sh "python3 parametercoverage2.py" 
             }
         }
+        stage('Function to find the Parameter in the xml data frame') {
+            steps {
+                sh "python3 parametercoverage3.py"
+            }
+        }
     }
 }
