@@ -27,7 +27,6 @@ def convertXMLtoDataFrame():
     return xmlToDf;
 
 xmlToDf= convertXMLtoDataFrame()
-print(xmlToDf.to_string(index=False))
 
 # Step 3 -- Function to find the Parameter in the xml data frame
 print('Function to find the Parameter in the xml data frame')
