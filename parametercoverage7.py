@@ -12,7 +12,7 @@ from email import encoders
 
 #dfTextFile = pd.read_csv('Psm_coverage_psm_dev.txt', memory_map=True, header=None)
 dfTextFile = pd.read_fwf('Psm_coverage_psm_dev.txt', memory_map=True, header=None)
-#print(dfTextFile.info())
+print(dfTextFile.info())
 for col in dfTextFile:
    #print(dfTextFile[col].unique())
   
