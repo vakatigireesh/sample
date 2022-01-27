@@ -37,5 +37,10 @@ pipeline {
                 sh "python3 parametercoverage6.py"
             }
         }
+        stage('Function to find the average of parameters') {
+            steps {
+                sh "python3 parametercoverage7.py"
+            }
+        }
     }
 }
