@@ -27,5 +27,10 @@ pipeline {
                 sh "python3 parametercoverage4.py" 
             }
         }
+        stage('Function to develop a report and send an email') {
+            steps {
+                sh "python3 parametercoverage5.py" 
+            }
+        }
     }
 }
