@@ -32,5 +32,10 @@ pipeline {
                 sh "python3 parametercoverage5.py" 
             }
         }
+        stage('Function to convert dev.txt to data frame') {
+            steps {
+                sh "python3 parametercoverage6.py"
+            }
+        }
     }
 }
