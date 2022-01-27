@@ -9,6 +9,13 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
+def findParameterFromXMLDataFrame(xmlToDf, searchString):
+    print(xmlToDf[xmlToDf['Object'].str.contains(searchString)])
+
+searchString='RTDB_GP_ESWITCH_OUTPUTS_E'
+findParameterFromXMLDataFrame(xmlToDf,searchString)
+
+
 # Step 4-- Function to pass or fail the build depending on the previous step 
 
 print('Function to pass or fail the build depending on the previous step')
