@@ -9,6 +9,18 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
+searchString='RTDB_GP_ESWITCH_OUTPUTS_E1'
+resultDataFrame=findParameterFromXMLDataFrame(xmlToDf,searchString)
+print(resultDataFrame.size)
+buildStatus=''
+if resultDataFrame.size>0:
+    buildStatus='PASS'
+    print('PASS')
+else:
+    buildStatus='FAIL'
+    print('FAIL')
+
+
 # Step 5 -- Function to develop a report and send an email 
 print('Function to develop a report and send an email')
 print(buildStatus)
