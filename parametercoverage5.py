@@ -32,7 +32,7 @@ xmlToDf= convertXMLtoDataFrame()
 
 # Step 4-- Function to pass or fail the build depending on the previous step 
 
-print('Function to pass or fail the build depending on the previous step')
+# print('Function to pass or fail the build depending on the previous step')
 def findParameterFromXMLDataFrame(xmlToDf, searchString):
     return xmlToDf[xmlToDf['Object'].str.contains(searchString)]
     
@@ -42,10 +42,10 @@ print(resultDataFrame.size)
 buildStatus=''
 if resultDataFrame.size>0:
     buildStatus='PASS'
-    print('PASS')
+   # print('PASS')
 else:
     buildStatus='FAIL'
-    print('FAIL')
+   # print('FAIL')
 
 
 
