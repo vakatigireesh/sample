@@ -9,11 +9,24 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
-def findParameterFromXMLDataFrame(xmlToDf, searchString):
-    print(xmlToDf[xmlToDf['Object'].str.contains(searchString)])
+def convertXMLtoDataFrame():
+    print("convertXMLtoDataFrame")
+    prstree = ET.parse('config.xml')
+    root = prstree.getroot()
 
-searchString='RTDB_GP_ESWITCH_OUTPUTS_E'
-findParameterFromXMLDataFrame(xmlToDf,searchString)
+    store_items = []
+    all_items = []
+    for storeno in root.find('POOL').findall('Parameter'):  
+        obj=storeno.attrib.get('obj')
+        no= storeno.find('No').attrib.get('Nsp')
+        res= storeno.find('Responsible').text
+        store_items = [obj,no,res]
+        all_items.append(store_items)
+  
+    xmlToDf = pd.DataFrame(all_items,columns=['Object','Number','Responsible'])        
+    return xmlToDf;
+
+xmlToDf= convertXMLtoDataFrame()
 
 
 # Step 4-- Function to pass or fail the build depending on the previous step 
