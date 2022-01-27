@@ -22,5 +22,10 @@ pipeline {
                 sh "python3 parametercoverage3.py"
             }
         }
+        stage('Function to pass or fail the build depending on the previous step') {
+            steps {
+                sh "python3 parametercoverage4.py" 
+            }
+        }
     }
 }
