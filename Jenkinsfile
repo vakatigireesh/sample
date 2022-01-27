@@ -42,5 +42,10 @@ pipeline {
                 sh "python3 parametercoverage7.py"
             }
         }
+        stage('Function to pass or fail the build depending on the previous step') {
+            steps {
+                sh "python3 parametercoverage8.py"
+            }
+        }
     }
 }
