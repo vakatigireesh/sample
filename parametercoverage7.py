@@ -14,7 +14,7 @@ from email import encoders
 dfTextFile = pd.read_fwf('Psm_coverage_psm_dev.txt', memory_map=True, header=None)
 #print(dfTextFile.info())
 for col in dfTextFile:
-   print(dfTextFile[col].unique())
+   #print(dfTextFile[col].unique())
   
   
 print('#Step 7 -- Function to find the average of parameters')
