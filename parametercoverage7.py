@@ -17,5 +17,5 @@ for col in dfTextFile:
    #print(dfTextFile[col].unique())
   
   
-print('#Step 7 -- Function to find the average of parameters')
-print(dfTextFile.describe())
+   print('#Step 7 -- Function to find the average of parameters')
+   print(dfTextFile.describe())
