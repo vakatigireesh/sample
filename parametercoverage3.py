@@ -33,5 +33,5 @@ print('Function to find the Parameter in the xml data frame')
 def findParameterFromXMLDataFrame(xmlToDf, searchString):
     print(xmlToDf[xmlToDf['Object'].str.contains(searchString)])
 
-searchString='RTDB_GP_ESWITCH_OUTPUTS_E_'
+searchString='RTDB_GP_ESWITCH_OUTPUTS_E'
 findParameterFromXMLDataFrame(xmlToDf,searchString)
