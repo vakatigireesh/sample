@@ -36,7 +36,7 @@ xmlToDf= convertXMLtoDataFrame()
 def findParameterFromXMLDataFrame(xmlToDf, searchString):
     return xmlToDf[xmlToDf['Object'].str.contains(searchString)]
     
-searchString='RTDB_GP_ESWITCH_OUTPUTS_E'
+searchString='RTDB_GP_ESWITCH_OUTPUTS_E1'
 resultDataFrame=findParameterFromXMLDataFrame(xmlToDf,searchString)
 print(resultDataFrame.size)
 buildStatus=''
