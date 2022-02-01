@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Get Latest Sourcecode') {
             steps {
-                git 'https://github.com/sajjavenkey50/sample.git'
+                git 'https://github.com/vakatigireesh/sample.git'
             }
         }
         stage('Function to conversion of excel sheet into Data frame') {
